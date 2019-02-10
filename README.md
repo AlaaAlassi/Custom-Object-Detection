@@ -100,3 +100,9 @@ Here’s what I got from running my model over all the frames in this clip from 
 ## License
 
 [MIT](LICENSE)
+
+
+## stuff you shuld change for your detector 
+- `add your annotation file to annotations/(yourFile).pbtxt
+- `in the .config file change these : [input_path: "(yourFile).record"] and [ label_map_path: "annotations/label_map_keys.pbtxt"] and []
+- `in the file object_detection_runner.py change these : [PATH_TO_LABELS = 'annotations/label_map_keys.pbtxt'] and MODEL_NAME = 'output_inference_graph-(yourName)'
