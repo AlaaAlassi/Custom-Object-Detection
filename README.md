@@ -74,7 +74,7 @@ Move the model.ckpt files with the highest number to the root of the repo:
 In order to use the model, you first need to convert the checkpoint files (`model.ckpt-STEP_NUMBER.*`) into a frozen inference graph by running this command:
 
 ```bash
-python object_detection/export_inference_graph.py \
+python3 object_detection/export_inference_graph.py \
         --input_type image_tensor \
         --pipeline_config_path faster_rcnn_resnet101.config \
         --trained_checkpoint_prefix model.ckpt-STEP_NUMBER \
@@ -87,7 +87,7 @@ You should see a new `output_inference_graph` directory with a `frozen_inference
 Just run the following command:
 
 ```bash
-python object_detection/object_detection_runner.py
+python3 object_detection/object_detection_runner.py
 ```
 
 It will run your object detection model found at `output_inference_graph/frozen_inference_graph.pb` on all the images in the `test_images` directory and output the results in the `output/test_images` directory.
