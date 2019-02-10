@@ -51,7 +51,7 @@ Extract the files and move all the `model.ckpt` to our models directory.
 Run the following script to train the model:
 
 ```bash
-python object_detection/train.py \
+python3 object_detection/train.py \
         --logtostderr \
         --train_dir=train \
         --pipeline_config_path=faster_rcnn_resnet101.config
